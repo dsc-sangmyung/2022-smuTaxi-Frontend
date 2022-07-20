@@ -1,0 +1,60 @@
+.start_list button {
+    width: 92px;
+    height: 105px;
+    border-radius: 12px;
+    background: #FFFFFF;
+    border: none;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    color: #778EFF;
+    margin-bottom: 38px;
+}
+
+.start_button {
+    width: 224px;
+    height: 58px;
+    border-radius: 20px;
+    background: #4F66E3;
+    border: none;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+
+    margin-bottom: 32px;
+}
+
+.start_button_true {
+    width: 224px;
+    height: 58px;
+    border-radius: 20px;
+    background: #4F66E3;
+    border: none;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+
+    margin-bottom: 32px;
+}
+
+.start_button_false {
+    width: 224px;
+    height: 58px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    border: none;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    color: #4F66E3;
+
+    margin-bottom: 32px;
+}
