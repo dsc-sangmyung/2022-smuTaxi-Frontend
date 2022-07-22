@@ -1,8 +1,7 @@
-
 import "./App.css"
 
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Page1, Page2 } from './pages';
+import { Page1, Page2, Page3 } from './pages';
 
 
 
@@ -13,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Page1/>}/>
           <Route path="/go" element={<Page2 title="등교"/>}/>
-          <Route path="/back" element={<Page2 title="하교"/>}/>
+          <Route path="/back" element={<Page3 title="하교"/>}/>
         </Routes>
       </Router>
     </div>
