@@ -13,6 +13,10 @@
     color: #778EFF;
     margin-bottom: 38px;
 }
+.start_list button:focus{
+    background: #4F66E3;
+    color: #FFFFFF;
+}
 
 .start_button {
     width: 224px;
