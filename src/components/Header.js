@@ -1,9 +1,14 @@
 import React from "react";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
 
 const TopBar = () => {
+    const navigate = useNavigate();
+    const back_click = () => {navigate('/')}
     return (
         <div className="top_bar">
+            <MdKeyboardArrowLeft className="icons" size="24" onClick={back_click}/>
         </div>
     );
 };
