@@ -1,0 +1,29 @@
+.peopleNum .plus{
+    width: 30px;
+    height: 35px;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color:#778EFF;
+    border-radius: 6px;
+    border:none;
+}
+
+.peopleNum button{
+    margin-right: 12px;
+    margin-bottom: 14px;
+    margin-top: 27px;
+    width: 92px;
+    height: 51px;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color:#778EFF;
+    border-radius: 12px;
+    border:none;
+}
+.peopleNum button:first-child{
+    color:#FFFFFF;
+}
