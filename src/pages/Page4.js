@@ -1,10 +1,9 @@
 import React from "react";
 import Title from "../components/Title";
 import TopBar from "../components/Header";
-import Pick from "../components/Pick";
+import Pick from "../components/Time";
 
-
-const Page2 = (props) => {
+const Page4 = (props) => {
 
     return (
         <div className="main">
@@ -15,4 +14,4 @@ const Page2 = (props) => {
     );
 };
 
-export default Page2;
+export default Page4;

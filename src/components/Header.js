@@ -8,7 +8,7 @@ const TopBar = () => {
     const back_click = () => {navigate('/')}
     return (
         <div className="top_bar">
-            <MdKeyboardArrowLeft className="icons" size="24" onClick={back_click}/>
+            <MdKeyboardArrowLeft className="icons" size="36" onClick={back_click}/>
         </div>
     );
 };
