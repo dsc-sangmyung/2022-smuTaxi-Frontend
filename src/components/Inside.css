@@ -1,0 +1,104 @@
+.room {
+    width: 358px;
+    height: 560px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    margin: auto;
+}
+
+
+.room_head {
+    display:flex;
+}
+
+.room_head span {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.room_head span {
+    margin-left: 18px;
+    margin-top: 18px;
+    float: left
+}
+
+.room_head img {
+    /* display: inline-block; */
+    
+    margin-top: 18px;
+    margin-right: 18px;
+}
+
+
+
+
+.people_box {
+    padding-top: 40px;
+    text-align: center;
+
+}
+
+.people {
+    display: inline-block;
+}
+
+.name {
+    margin-top: 7px;
+    margin-bottom: 30px;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.item_box {
+    margin: 6px;
+    display: inline-block;
+    padding-top: 12px;
+    width: 155px;
+    height: 164px;
+    border-radius: 20px;
+    text-align: center;
+
+    background-color: #778EFF;
+}
+
+.empty_box {
+    margin: 6px;
+    display: flex;
+    width: 155px;
+    height: 164px;
+    background-color: #F1F1F1;
+    border-radius: 12px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #778EFF;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+
+.item {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width:fit-content;
+    height: 30px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #778EFF;
+    line-height: 30px;
+}
