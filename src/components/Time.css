@@ -1,0 +1,68 @@
+.inner_box{
+    margin: auto;
+    width: 358px;
+    height: 335px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    margin-top: 32px;
+    margin-bottom: 33px;
+    overflow : auto;
+}
+.inner_box::-webkit-scrollbar{
+    display:none;
+}
+
+.place{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.place button{
+    width: 129px;
+    height: 33px;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    color:#778EFF;
+    border-radius: 24px;
+    border: none;
+    background-color: #FFFFFF;
+}
+.place img{
+    margin-left: 13px;
+    margin-right: 13px;    
+}
+.FinalTime{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    color:#778EFF;
+    border: none;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    width: 193px;
+    height: 35px;
+}
+
+.time button{
+    margin: auto;
+    margin-right: 12px;
+    margin-bottom: 14px;
+    width: 92px;
+    height: 51px;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color:#778EFF;
+    border-radius: 12px;
+    border:none;
+}
+.time div:nth-child(odd){
+    margin-top: 32px;
+}

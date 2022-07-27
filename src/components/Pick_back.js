@@ -1,12 +1,13 @@
 import {React, useState} from "react";
 import "./Box.css";
 import "./Pick.css";
+import { useNavigate } from "react-router-dom";
 
 const Pick_back = () => {
     const [state, setState] = useState(false);
     const [start, setStart] = useState('출발지');
     const [dst, setDst] = useState('도착지');
-
+    const navigate = useNavigate();
 
     const clickStart = (event) => {
         if (state==='start') {
@@ -34,8 +35,7 @@ const Pick_back = () => {
     };
 
     const clickCompleteButton = () => {
-
-
+        navigate('/time');
     };
 
     return (
