@@ -27,3 +27,15 @@
 .peopleNum button:first-child{
     color:#FFFFFF;
 }
+.peopleNum button:focus{
+    background: #4F66E3;
+    color: #FFFFFF;
+}
+.button_true{
+    background-color:#FFFFFF;
+    color: #424242;
+}
+.button_true:focus{
+    background: #4F66E3;
+    color: #FFFFFF;
+}
