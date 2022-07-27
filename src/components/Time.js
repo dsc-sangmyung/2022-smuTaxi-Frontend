@@ -22,12 +22,12 @@ const Time = () => {
         <div className="box">
             <div className="pin_height">
                 <div className="place">
-                    <button>여기에 장소</button>
+                    <button>{location.state.start}</button>
                     <img src={logoPath}></img>
-                    <button>기숙사</button>
+                    <button>{location.state.dst}</button>
                 </div>
                 <div className="FinalTime">
-                    시간 - 16:45
+                    {pickTime} - {pickTime}
                 </div>
                 <div className="inner_box">
                     <div className="time">

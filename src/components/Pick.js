@@ -37,7 +37,12 @@ const Pick = () => {
     };
 
     const clickCompleteButton = () => {
-        navigate('./time');
+        navigate('/time',{
+            state : {
+                start : start,
+                dst:dst
+            }
+        });
     };
 
     return (
