@@ -5,14 +5,15 @@ import "./Intro.css"
 const Intro = () =>{
     const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     let timer = setTimeout(() => {navigate('.go_back') 
-    //     }, 2000);  
-    // });
+    function Timer () {
+        setTimeout(() => {
+            navigate('./go_back')
+        }, 3000);
+    }
 
     return(
         <div className="full_box">
-            <img src={logoPath} className="img_intro"></img>
+            <img src={logoPath} className="img_intro" onload={Timer()}></img>
         </div>
     )
 }
