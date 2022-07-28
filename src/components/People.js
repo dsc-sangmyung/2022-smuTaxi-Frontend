@@ -1,24 +1,24 @@
-import {React, useState} from "react";
-import { useNavigate } from "react-router-dom";
+import {React} from "react";
 import "./Box.css";
 import "./Pick.css";
 import "./Inside.css";
 
 
-const People = () => {
+const People = (props) => {
 
     return (
         <div className="people">
             <div className="item_box">
-                <div className="item">
-                    파란모자
-                </div>
-                <div className="item">
-                    청바지
-                </div>
+                {props.data.item.map((item, ind)=>{
+                    return (
+                        <div key={ind} className="item">
+                            {item}
+                        </div>
+                    );
+                })}
             </div>
             <div className="name">
-                김수지 (여)
+                {props.data.name} ({props.data.gender === "male"? "남":"여"})
             </div>
         </div>
     );

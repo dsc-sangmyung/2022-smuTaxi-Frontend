@@ -8,7 +8,6 @@ const Page6 = (props) => {
     return (
         <div className="main">
             <TopBar></TopBar>
-            <Title title={props.title}></Title>
             <Inside></Inside>
         </div>
     );
