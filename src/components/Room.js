@@ -11,6 +11,7 @@ import "./Room.css";
 
 const Room = () =>{
     const location = useLocation();
+    const navigate = useNavigate();
 
     const [roomId, setRoomid] =  useState();
 
@@ -19,7 +20,13 @@ const Room = () =>{
     }
     
     const clickCompleteButton = () => {
-        console.log(roomId, "방을 선택하셨습니다.");
+        navigate('/inside',{
+            state : {
+                start : location.state.start,
+                dst:location.state.dst,
+                time : location.state.time
+            }
+        });
     };
         return(
             <div className="box">
