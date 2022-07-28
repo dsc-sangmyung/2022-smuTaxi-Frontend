@@ -1,3 +1,30 @@
+.place button{
+    width: 129px;
+    height: 33px;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    color:#778EFF;
+    border-radius: 24px;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.FinalTime{
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    margin-top: 39px;
+    margin-bottom: -10px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    color:#778EFF;
+    border: none;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    width: 193px;
+    height: 35px;
+}
 .room {
     width: 358px;
     height: 560px;
@@ -17,12 +44,14 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 100%;
-}
-
-.room_head span {
     margin-left: 18px;
     margin-top: 18px;
     float: left
+}
+
+.room_head img {
+    margin-right: 18px;
+    margin-left: 260px;
 }
 
 .room_head img {

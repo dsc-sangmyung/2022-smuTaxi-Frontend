@@ -9,7 +9,6 @@ import "./Room.css";
 
 
 
-
 const Room = () =>{
     const location = useLocation();
 
@@ -54,6 +53,5 @@ const Room = () =>{
             
         )   
     }
-
 
 export default Room;
