@@ -1,5 +1,6 @@
 import {React, useState} from "react";
 import {useLocation} from "react-router";
+import { useNavigate } from "react-router-dom";
 import logoPath from '../components/arrow.png'
 import "./Box.css";
 import "./Time.css";
@@ -8,13 +9,20 @@ const Time = () => {
     const [time, setTime] = useState('시간');
 
     const location = useLocation();
+    const navigate = useNavigate();
 
     const pickTime = (event) => {
         setTime(event.target.value);
     };
 
     const clickCompleteButton = () => {
-
+        navigate('/room',{
+            state : {
+                start : location.state.start,
+                dst:location.state.dst,
+                time : time
+            }
+        });
     };
 
     return(
