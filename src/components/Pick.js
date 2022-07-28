@@ -11,7 +11,7 @@ const Pick = () => {
    
     const navigate = useNavigate();
 
-    const clickStart = (event) => {
+    const clickStart = () => {
         if (state==='start') {
             setState(false);
         } else {
@@ -29,7 +29,6 @@ const Pick = () => {
 
     const pickStart = (event) => {
         setStart(event.target.value);
-        
     };
 
     const pickDst = (event) => {
@@ -50,7 +49,7 @@ const Pick = () => {
             <div className="pin_height">
                 <button onClick={clickStart} className={state === 'start'? "start_button_true":"start_button_false"}>{start}</button>
                 {state==='start' && <div className="start_list">
-                    <button onClick={pickStart  } value='두정역'>두정역</button>
+                    <button onClick={pickStart} value='두정역'>두정역</button>
                     <button onClick={pickStart} value='천안역'>천안역</button>
                     <button onClick={pickStart} value='터미널'>터미널</button>
                 </div> }
