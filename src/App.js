@@ -1,7 +1,7 @@
 import "./App.css"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { Page0, Page1, Page2, Page3, Page4, Page5,Page6} from './pages';
+import { Page0, Page1, Page2, Page3, Page4, Page5,Page6,Page7} from './pages';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Route path="/time" element={<Page4 title="시간선택"/>}/>
           <Route path="/room" element={<Page5 title="시간선택"/>}/>
           <Route path="/inside" element={<Page6/>}/>
+          <Route path="/information" element={<Page7 title="정보 입력"/>}/>
         </Routes>
       </Router>
     </div>

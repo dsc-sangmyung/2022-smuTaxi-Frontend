@@ -1,0 +1,78 @@
+.input_inner_box{
+    margin: auto;
+    background-color: #FFFFFF;
+    width: 358px;
+    height: 464px;
+    border-radius: 20px;
+}
+.input_name{
+    margin-top: 28px;
+    width: 305px;
+    height: 51px;
+    border-color: #D7D7D7;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+}
+.sex button{
+    width: 146px;
+    height: 50px;
+    margin-top: 12px;
+    background-color: #FFFFFF;
+    border-color: #D7D7D7;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 12px;
+}
+.female{
+    margin-left: 4px;
+}
+.male{
+    margin-left: 14px;
+}
+.female:focus,.male:focus{
+    background-color: #778EFF;
+    color: #FFFFFF;
+}
+.btn_pl_mi button{
+    margin: auto;
+    border-radius: 12px;
+    border: 2px solid #D7D7D7;
+    background-color: #FFFFFF;
+    width: 305px;
+    height: 51px;
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 12px;
+    
+}
+.btn_pl_mi .plus{
+    background-color: #F1F1F1;
+    border:none;
+}
+.line{
+    width: 85%;
+    text-align: center;
+    border-bottom: 1px solid #778EFF;
+    line-height: 0.1em;
+    margin: 35px 0px 28px 26px;
+    
+}
+.keyword{
+    background-color: #fff;
+    width: 125px;
+    padding-left: 15px;
+    padding-right: 16px;
+    color: #778EFF;
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+}
+

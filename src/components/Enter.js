@@ -6,12 +6,20 @@ import "./Inside.css";
 
 
 const Enter = () => {
-
+    const navigate = useNavigate();
+    
+    const InPutInformtaion = () => {
+        navigate('/information',{
+            state : {
+                
+            }
+        });
+    };
     return (
         <div className="people">
-            <div className="empty_box">
+            <button className="empty_box" onClick={InPutInformtaion}>
                 참여하기
-            </div>
+            </button>
             <div className="name">
                 ?
             </div>

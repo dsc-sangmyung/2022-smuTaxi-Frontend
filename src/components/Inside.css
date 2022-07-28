@@ -59,13 +59,9 @@
     margin-right: 18px;
 }
 
-
-
-
 .people_box {
     padding-top: 40px;
     text-align: center;
-
 }
 
 .people {
@@ -110,6 +106,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 100%;
+    border: none;
 }
 
 
