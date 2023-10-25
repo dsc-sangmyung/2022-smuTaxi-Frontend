@@ -16,13 +16,13 @@ const Page0 = () =>{
     function Timer () {
         setTimeout(() => {
             navigate('./go_back');
-        }, 30000);
+        }, 3000);
     }
 
     return(
         <c.Totalframe>
             <Center>
-                <img src={logoPath} onload={Timer()}></img>
+                <img src={logoPath}  onload={Timer()}></img>
             </Center>
         </c.Totalframe>
     )
