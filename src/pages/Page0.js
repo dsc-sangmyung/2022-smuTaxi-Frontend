@@ -16,7 +16,7 @@ const Page0 = () =>{
     function Timer () {
         setTimeout(() => {
             navigate('./go_back');
-        }, 30000);
+        }, 3000);
     }
 
     return(
