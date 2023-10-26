@@ -1,17 +1,25 @@
 import React from "react";
-import { MdKeyboardArrowLeft } from "react-icons/md";
-import "./Header.css";
 import { useNavigate } from "react-router-dom";
+import styled from 'styled-components';
+import back from '../static/img/Back Icon.svg'
 
+const TopBars = styled.div`
+    min-height: 5vh;
+`;
+
+const Icons = styled.img`
+    margin-top: 3.7vh;
+    margin-bottom: 3.08vh;
+`;
 
 const TopBar = () => {
     const navigate = useNavigate();
 
     const back_click = () => {navigate(-1)}
     return (
-        <div className="top_bar">
-            <MdKeyboardArrowLeft className="icons" size="36" onClick={back_click}/>
-        </div>
+        <TopBars className="top_bar">
+            <Icons src={back} onClick={back_click}/>
+        </TopBars>
     );
 };
 
