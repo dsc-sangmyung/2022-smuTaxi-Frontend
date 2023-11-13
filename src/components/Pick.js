@@ -54,7 +54,7 @@ const Pick = () => {
     const handlePlaceVal = (place) => {
         setSelectPlace(place);
         setBtn(true);
-        localStorage.setItem('place', place);
+        localStorage.setItem('startPlace', place);
     }
     const handleDstPlaceVal = (dstPlace) => {
         setSelectDstPlace(dstPlace);
