@@ -1,79 +1,100 @@
 import {React, useState} from "react";
 import { useNavigate } from "react-router-dom";
-import "./Box.css";
+import BottomBtn from "./Common/BottomBtn";
+import PlaceBox from "./Box/PlaceBox";
+import * as box from "./Box/BoxStyle";
+import styled from 'styled-components';
 import "./Pick.css";
 
+const PlaceTitleBtn = styled.div`
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 224px;
+    height: 6.87vh;
+    background-color: #4F66E3;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 3.79vh;
+    margin-top: ${(props)=>(props.destination ? '4.05vh' : '0vh' )};
+    cursor: pointer;
+    /* text */
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
 
+`;
+const RowPlaceBox = styled.div`
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 13px;
+    display: ${(props)=>(props.isDisplay ? 'grid' : 'none')};
+`;
 const Pick = () => {
+    const [selectPlace, setSelectPlace] = useState(null);
+    const [selectDstPlace, setSelectDstPlace] = useState(null);
     const [state, setState] = useState(false);
-    const [start, setStart] = useState('출발지');
-    const [dst, setDst] = useState('도착지');
+    const [start, setStart] = useState(false);
+    const [dst, setDst] = useState(false);
+    const [btn, setBtn] = useState(false);
    
     const navigate = useNavigate();
 
-    const clickStart = () => {
-        if (state==='start') {
-            setState(false);
-        } else {
-            setState('start');
+    const handlePlaceBtn = (isStart) => {
+        if (isStart === '출발지') {
+            setStart(true);
+            setDst(false);
+            
+        } else if (isStart === '도착지') {
+            setDst(true);
+            setStart(false);
         }
-    };
-
-    const clickDst = () => {
-        if (state==='dst') {
-            setState(false);
-        } else {
-            setState('dst');
-        }
-    };
-
-    const pickStart = (event) => {
-        setStart(event.target.value);
-    };
-
-    const pickDst = (event) => {
-        setDst(event.target.value);
-    };
-
-    const clickCompleteButton = () => {
-        navigate('/time',{
-            state : {
-                start : start,
-                dst:dst
-            }
-        });
-    };
-
-    return (
-        <div className="box">
-            <div className="pin_height">
-                <button onClick={clickStart} className={state === 'start'? "start_button_true":"start_button_false"}>{start}</button>
-                {state==='start' && <div className="start_list">
-                    <button onClick={pickStart} value='두정역'>두정역</button>
-                    <button onClick={pickStart} value='천안역'>천안역</button>
-                    <button onClick={pickStart} value='터미널'>터미널</button>
-                </div> }
-                <div></div>
-                <button onClick={clickDst} className={state === 'dst'? "start_button_true":"start_button_false"}>{dst}</button>
-                { state === 'dst' && <div className="start_list">
-                    <div>
-                        <button onClick={pickDst} value='정문'>정문</button>
-                        <button onClick={pickDst} value='한누리관'>한누리관</button>
-                        <button onClick={pickDst} value='기숙사'>기숙사</button>
-                    </div>
-                    <div>
-                        <button onClick={pickDst} value='안서 동보'>안서 동보</button>
-                        <button onClick={pickDst} value='디대'>디대</button>
-                        <button onClick={pickDst} value='굴다리'>굴다리</button>
-                    </div>
-                </div> }
-            </div>
-
-            <button onClick={clickCompleteButton} className="button_true">
-                선택완료
-            </button>
-        </div>
-    );
+    }
+    const handlePlaceVal = (place) => {
+        setSelectPlace(place);
+        setBtn(true);
+        localStorage.setItem('place', place);
+    }
+    const handleDstPlaceVal = (dstPlace) => {
+        setSelectDstPlace(dstPlace);
+        setBtn(true);
+        localStorage.setItem('dstPlace', dstPlace);
+    }
+    const startPlace =[
+        { name: '두정역' },
+        { name: '천안역' },
+        { name: '터미널' },
+    ]
+    const dstPlace = [
+        { name : '정문'},
+        { name : '한누리관'},
+        { name : '기숙사'},
+        { name : '안서 동보'},
+        { name : '디자인대학'},
+        { name : '굴다리'},
+    ]
+    return(
+        <box.Box>
+            <box.PinHeight>
+                <PlaceTitleBtn onClick={()=>handlePlaceBtn('출발지')}>출발지</PlaceTitleBtn>
+                <RowPlaceBox isDisplay={start}>
+                    {startPlace.map(item => (
+                        <PlaceBox start={'start'} place={item.name} isSelected={selectPlace == item.name}
+                        onClick={() => handlePlaceVal(item.name)}/>
+                    ))}
+                </RowPlaceBox>
+                <PlaceTitleBtn destination={'도착지'} onClick={()=>handlePlaceBtn('도착지')}>도착지</PlaceTitleBtn>
+                <RowPlaceBox isDisplay={dst}>
+                    {dstPlace.map(item => (
+                        <PlaceBox dst={'dst'} place={item.name} isSelected={selectDstPlace == item.name}
+                        onClick={() => handleDstPlaceVal(item.name)}/>
+                    ))}
+                </RowPlaceBox>
+            </box.PinHeight>
+            <BottomBtn btnName={'선택완료'} isSelected={btn}/>
+        </box.Box>
+    )
 };
 
 export default Pick;
