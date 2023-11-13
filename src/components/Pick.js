@@ -33,6 +33,7 @@ const RowPlaceBox = styled.div`
 `;
 const Pick = () => {
     const [selectPlace, setSelectPlace] = useState(null);
+    const [selectDstPlace, setSelectDstPlace] = useState(null);
     const [state, setState] = useState(false);
     const [start, setStart] = useState(false);
     const [dst, setDst] = useState(false);
@@ -44,13 +45,21 @@ const Pick = () => {
         if (isStart === '출발지') {
             setStart(true);
             setDst(false);
+            
         } else if (isStart === '도착지') {
             setDst(true);
             setStart(false);
         }
     }
     const handlePlaceVal = (place) => {
-        setSelectPlace(place); 
+        setSelectPlace(place);
+        setBtn(true);
+        localStorage.setItem('place', place);
+    }
+    const handleDstPlaceVal = (dstPlace) => {
+        setSelectDstPlace(dstPlace);
+        setBtn(true);
+        localStorage.setItem('dstPlace', dstPlace);
     }
     const startPlace =[
         { name: '두정역' },
@@ -78,8 +87,8 @@ const Pick = () => {
                 <PlaceTitleBtn destination={'도착지'} onClick={()=>handlePlaceBtn('도착지')}>도착지</PlaceTitleBtn>
                 <RowPlaceBox isDisplay={dst}>
                     {dstPlace.map(item => (
-                        <PlaceBox dst={'dst'}place={item.name} isSelected={selectPlace == item.name}
-                        onClick={() => handlePlaceVal(item.name)}/>
+                        <PlaceBox dst={'dst'} place={item.name} isSelected={selectDstPlace == item.name}
+                        onClick={() => handleDstPlaceVal(item.name)}/>
                     ))}
                 </RowPlaceBox>
             </box.PinHeight>

@@ -30,8 +30,9 @@ const PalceText = styled.div`
     font-weight: 600;
 `;
 const PlaceBox = (props) => {
+    const { isSelected, onClick } = props;
     return(
-        <TotalPlaceBox isSelected={props.isSelected} onClick={props.onClick} isStart={props.start}>
+        <TotalPlaceBox isSelected={isSelected} onClick={onClick} >
             <PalceText>{props.place}</PalceText>
         </TotalPlaceBox>
     );
