@@ -30,7 +30,7 @@ export const TotalMainFrame = styled.div`
 
 
 export const ScreenComponent = styled.div`
-  padding: 0px 44px;
+  padding: 0px 40px;
 `;
 
 export const SubScreen = styled.div`
