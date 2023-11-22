@@ -82,6 +82,7 @@ const TimeBox = styled.div`
         font-size: 17px;
         font-style: normal;
         font-weight: 700;
+        cursor:pointer;
     }
 `;
 const Time = () => {
