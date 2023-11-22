@@ -11,7 +11,7 @@
 }
 
 .peopleNum button{
-    margin-right: 12px;
+    /* margin-right: 12px;
     margin-bottom: 14px;
     margin-top: 27px;
     width: 92px;
@@ -22,7 +22,7 @@
     font-size: 18px;
     color:#778EFF;
     border-radius: 12px;
-    border:none;
+    border:none; */
 }
 .peopleNum button.full {
     color: #FFFFFF;

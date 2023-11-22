@@ -23,7 +23,7 @@ const Text = styled.div`
 `;
 const BottomBtn = (props) => {
     return(
-        <Button isSelected={props.isSelected}>
+        <Button isSelected={props.isSelected} onClick={props.onClick}>
             <Text>{props.btnName}</Text>
         </Button>
     );

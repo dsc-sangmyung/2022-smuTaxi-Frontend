@@ -54,13 +54,20 @@ const Pick = () => {
     const handlePlaceVal = (place) => {
         setSelectPlace(place);
         setBtn(true);
-        localStorage.setItem('place', place);
     }
     const handleDstPlaceVal = (dstPlace) => {
         setSelectDstPlace(dstPlace);
         setBtn(true);
-        localStorage.setItem('dstPlace', dstPlace);
     }
+
+    const clickCompleteButton = () => {
+        navigate('/time',{
+            state : {
+                start : selectPlace,
+                dst: selectDstPlace
+            }
+        });
+    };
     const startPlace =[
         { name: '두정역' },
         { name: '천안역' },
@@ -92,7 +99,7 @@ const Pick = () => {
                     ))}
                 </RowPlaceBox>
             </box.PinHeight>
-            <BottomBtn btnName={'선택완료'} isSelected={btn}/>
+            <BottomBtn btnName={'선택완료'} isSelected={btn} onClick={clickCompleteButton}/>
         </box.Box>
     )
 };
